@@ -1,0 +1,14 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Test that Anaconda python has been installed
+      shell: "/opt/anaconda3/bin/python -v -c 'quit();'"
+      args:
+        executable: /bin/bash
+      register: python_version
+      changed_when: false
+      failed_when:
+        - '"Anaconda, Inc." not in python_version.stderr'
