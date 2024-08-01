@@ -1,4 +1,6 @@
 ---
+- name: update chache 
+  shell: sudo apt update 
 - name: Install required packages
   package: name={{ item }}
   with_items:
