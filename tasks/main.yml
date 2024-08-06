@@ -22,8 +22,8 @@
   when: not check_anaconda_install_path.stat.exists
 
 - name: Install Anaconda
-  become: true
-  shell: "bash /tmp/Anaconda3-2024.06-1-Linux-x86_64.sh -b -p {{ anaconda_install_path }}anaconda{{ anaconda_python_version }}"
+
+  shell: "/tmp/Anaconda3-2024.06-1-Linux-x86_64.sh -b -p {{ anaconda_install_path }}anaconda{{ anaconda_python_version }}"
   args:
     executable: /bin/bash
   register: anaconda_install
