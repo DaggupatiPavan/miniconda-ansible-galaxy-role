@@ -14,7 +14,7 @@
   register: check_anaconda_install_path
 
 - name: Download Anaconda
-  shell: wget https://repo.continuum.io/archive/Anaconda3-2024.06-1-Linux-x86_64.sh -o /tmp/Anaconda{{ anaconda_python_version }}-{{ anaconda_version }}-Linux-x86_64.sh
+  shell: wget https://repo.continuum.io/archive/Anaconda3-2024.06-1-Linux-x86_64.sh -o /tmp/Anaconda3-2024.06-1-Linux-x86_64.sh
   # get_url:
   #   url: https://repo.continuum.io/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
   #   dest: "/tmp/Anaconda{{ anaconda_python_version }}-{{ anaconda_version }}-Linux-x86_64.sh"
@@ -23,7 +23,7 @@
 
 - name: Install Anaconda
   become: true
-  command: "/tmp/Anaconda{{ anaconda_python_version }}-{{ anaconda_version }}-Linux-x86_64.sh -b -p {{ anaconda_install_path }}anaconda{{ anaconda_python_version }}"
+  shell: "bash /tmp/Anaconda3-2024.06-1-Linux-x86_64.sh -b -p {{ anaconda_install_path }}anaconda{{ anaconda_python_version }}"
   args:
     executable: /bin/bash
   register: anaconda_install
