@@ -2,9 +2,11 @@
 - name: update chache 
   shell: sudo apt update 
 - name: Install required packages
-  package: name={{ item }}
-  with_items:
-    - bzip2
+  apt: 
+    name: bzip2 
+    state: present
+
+
 
 - name: Check if Anaconda is already installed
   stat:
