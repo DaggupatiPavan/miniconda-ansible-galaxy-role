@@ -23,7 +23,7 @@
 
 - name: Install Anaconda
   become: true
-  shell: "/tmp/Anaconda{{ anaconda_python_version }}-{{ anaconda_version }}-Linux-x86_64.sh -b -p {{ anaconda_install_path }}anaconda{{ anaconda_python_version }}"
+  command: "/tmp/Anaconda{{ anaconda_python_version }}-{{ anaconda_version }}-Linux-x86_64.sh -b -p {{ anaconda_install_path }}anaconda{{ anaconda_python_version }}"
   args:
     executable: /bin/bash
   register: anaconda_install
