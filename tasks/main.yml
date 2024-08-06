@@ -1,10 +1,10 @@
 ---
 - name: update chache 
   shell: sudo apt update 
-# - name: Install required packages
-#   apt: 
-#     name: bzip2 
-#     state: present
+- name: Install required packages
+  apt: 
+    name: bzip2 
+    state: present
 
 
 
