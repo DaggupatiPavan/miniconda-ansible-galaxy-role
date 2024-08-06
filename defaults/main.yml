@@ -3,4 +3,4 @@
 anaconda_python_version: 3
 anaconda_version: 2024.06-1
 anaconda_install_path: /opt/
-anaconda_download_url: "http://repo.continuum.io/archive/Anaconda{{ anaconda_python_version }}-{{ anaconda_version }}-Linux-x86_64.sh"
+anaconda_download_url: "https://repo.continuum.io/archive/Anaconda{{ anaconda_python_version }}-{{ anaconda_version }}-Linux-x86_64.sh"
